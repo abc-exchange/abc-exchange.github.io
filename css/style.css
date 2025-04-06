@@ -4,6 +4,7 @@
 :root {
   --primary: #242828;
   --secondary: #fed23a;
+  --secondary-dark: #c7ac3f;
   --light: #faf9f6;
   --hero-bg: #ffe68e;
   --dark: #121212;
@@ -15,6 +16,10 @@
 body {
   font-family: "Heebo", sans-serif;
   color: var(--dark);
+}
+
+.text-secondary-custom {
+  color: var(--secondary-dark) !important;
 }
 
 /* ---------------------------------------------- */
