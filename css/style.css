@@ -1,0 +1,124 @@
+/* ---------------------------------------------- */
+/* 🌐 Variables Globales */
+/* ---------------------------------------------- */
+:root {
+  --primary: #242828;
+  --secondary: #fed23a;
+  --light: #faf9f6;
+  --hero-bg: #ffe68e;
+  --dark: #121212;
+}
+
+/* ---------------------------------------------- */
+/* 🌐 Estilos Generales */
+/* ---------------------------------------------- */
+body {
+  font-family: "Heebo", sans-serif;
+  color: var(--dark);
+}
+
+/* ---------------------------------------------- */
+/* 🔄 Spinner de carga */
+/* ---------------------------------------------- */
+.square-loader {
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary);
+  position: relative;
+  animation: bounce-box 1.2s infinite ease-in-out;
+}
+
+@keyframes bounce-box {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
+  75% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#spinner.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* ---------------------------------------------- */
+/* 🧱 Sección Header (Hero) */
+/* ---------------------------------------------- */
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------- */
+/* ⛰️ Separador decorativo superior del CTA */
+/* ---------------------------------------------- */
+.cta-top-shape {
+  width: 100%;
+  height: 80px;
+  background-color: var(--dark); /* debe coincidir con fondo del CTA */
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  position: relative;
+  margin-top: -79px; /* lo empuja sobre el header */
+  margin-bottom: -1px; /* Nuevo: evita línea blanca */
+  z-index: 3; /* más alto que .cta-section */
+}
+
+/* ---------------------------------------------- */
+/* 💬 Sección Call to Action */
+/* ---------------------------------------------- */
+.cta-section {
+  position: relative;
+  background: linear-gradient(to top, #000000, var(--dark));
+  color: var(--light);
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -1px; /* asegura unión sin espacio */
+  z-index: 2;
+}
+
+.cta-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.cta-input {
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+  width: 250px;
+  border: none;
+}
+
+.btn-glow {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-glow:hover {
+  background-color: #e6bb2e;
+  color: var(--primary);
+}
